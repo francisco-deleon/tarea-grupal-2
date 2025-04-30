@@ -1,9 +1,56 @@
-Palabra              | Traducción          | Funcionalidad                           
--------------------------------------------------------------------------------------
-asm                  | ensamblador          | inserta código ensamblador en C++      
-auto                 | automático          | deduce automáticamente el tipo de una variable
-bool                 | booleano             | tipo de dato verdadero/falso            
-break                | romper               | termina un bucle o switch               
-case                 | caso                 | define un caso en un switch             
-false                | falso                | Valor booleano falso.                   
-for                  | para                 | bucle controlado
+Palabra              | Traducción           | Funcionalidad
+---------------------|----------------------|--------------------------------------------------------------
+asm                  | ensamblador          | inserta código ensamblador en C++
+auto                 | automático           | deduce automáticamente el tipo de una variable
+bool                 | booleano             | tipo de dato verdadero/falso
+break                | romper               | termina un bucle o switch
+case                 | caso                 | define un caso en un switch
+catch                | atrapar              | captura una excepción y permite que el programa la administre
+char                 | caracter             | tipo de dato utilizado para almacenar caracteres individuales
+class                | clase                | tipo de dato definido por el usuario que agrupa atributos y métodos
+const                | constante            | declara variables u objetos que no pueden ser modificados
+const_cast           | coerción de constantes | permite modificar la calificación const de una variable
+continue             | continuar            | salta a la siguiente iteración del bucle
+default              | por defecto          | define un valor predeterminado
+delete               | borrar               | desasigna memoria dinámica previamente asignada
+do                   | hacer                | ejecuta un bloque de código al menos una vez
+double               | doble                | almacena números de punto flotante (decimales)
+dynamic_cast         | coerción dinámica    | convierte tipos de manera segura
+else                 | entonces             | ejecuta código cuando una condición es falsa
+enum                 | enumeración          | define un conjunto de valores con nombres
+explicit             | explícito            | evita conversiones de tipo implícitas no deseadas
+extern               | externo              | extiende la visibilidad en múltiples archivos fuente
+false                | falso                | valor booleano falso
+float                | flotante             | almacena números con decimales
+for                  | para                 | ejecuta repetitivamente un bloque de código
+friend               | amigo                | permite a funciones acceder a miembros privados de una clase
+goto                 | ir a                 | transfiere la ejecución a una etiqueta
+if                   | si                   | ejecuta código si se cumple una condición
+inline               | en línea             | define funciones insertables directamente en el código
+int                  | entero               | almacena números enteros
+long                 | largo                | almacena enteros grandes
+mutable              | modificable          | permite modificar miembros en objetos const
+namespace            | espacio de nombre    | organiza el código en grupos lógicos
+new                  | nuevo                | asigna memoria dinámicamente
+operator             | operador             | permite sobrecargar operadores
+reinterpret_cast     | coerción por reinterpretación | convierte punteros entre tipos
+return               | retornar             | finaliza una función y devuelve un valor
+short                | corto                | define enteros de 16 bits
+signed               | con signo            | permite valores negativos en variables numéricas
+sizeof               | tamaño de            | devuelve el tamaño en bytes de un tipo o variable
+static_cast          | coerción estática    | convierte tipos relacionados de forma explícita
+struct               | estructura           | agrupa elementos de diferentes tipos
+switch               | intercambiar         | ejecuta uno de varios bloques según el valor de una variable
+template             | plantilla            | permite funciones y clases genéricas
+this                 | este                 | puntero que se refiere al objeto actual
+throw                | tirar                | lanza una excepción
+true                 | verdadero            | valor booleano verdadero
+try                  | intentar             | prueba un bloque de código en busca de errores
+typedef              | definición de tipo   | crea un alias para un tipo existente
+typeid               | identificador de tipo| obtiene información del tipo en tiempo de ejecución
+typename             | nombre de tipo       | indica que un nombre es un tipo en plantillas
+union                | unión                | comparte la misma memoria entre variables
+unsigned             | sin signo            | solo valores enteros positivos
+using                | usando               | importa miembros de espacios de nombres
+virtual              | virtual              | permite redefinir funciones en clases derivadas
+while                | mientras             | ejecuta repetitivamente mientras una condición sea verdadera

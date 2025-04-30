@@ -1,15 +1,15 @@
 /*	
-*	Tarea grupal #2 del curso Programación I
+*	Tarea grupal #2 del curso ProgramaciÃ³n I
 *	
-*	Universidad Mariano Gálvez de Guatemala
-*	Facultad de Ingeniería en Sistemas
+*	Universidad Mariano GÃ¡lvez de Guatemala
+*	Facultad de IngenierÃ­a en Sistemas
 *	
 *	Autores:
-*	Josseline Adriana Catalán Juárez
-*	José David Mazariegos Ortega
-*	Mynor Alexander Gómez Pedro
+*	Josseline Adriana CatalÃ¡n JuÃ¡rez
+*	JosÃ© David Mazariegos Ortega
+*	Mynor Alexander GÃ³mez Pedro
 *	Erick Manuel Fuentes Miranda
-*	Francisco Antonio De León Natareno
+*	Francisco Antonio De LeÃ³n Natareno
 */
 
 #include <iostream>
@@ -23,7 +23,7 @@
 #endif
 using namespace std;
 
-// Función para cargar el diccionario desde el archivo
+// FunciÃ³n para cargar el diccionario desde el archivo
 unordered_map<string, string> cargar_diccionario(const string& archivo_nombre) {
     unordered_map<string, string> diccionario;
     ifstream archivo(archivo_nombre);
@@ -58,14 +58,14 @@ unordered_map<string, string> cargar_diccionario(const string& archivo_nombre) {
     return diccionario;
 }
 
-// Función para traducir el texto multilínea
+// FunciÃ³n para traducir el texto multilÃ­nea
 void traducir_codigo(const unordered_map<string, string>& diccionario) {
-    cout << "Ingrese el codigo C++ a traducir (finalice con una línea vacía):" << endl;
+    cout << "Ingrese el codigo C++ a traducir (finalice con una lÃ­nea vacÃ­a):" << endl;
 
     string linea;
     vector<string> codigo_original;
 
-    // Ignorar el primer salto de línea
+    // Ignorar el primer salto de lÃ­nea
     cin.ignore();
 
     while (getline(cin, linea) && !linea.empty()) {
@@ -74,14 +74,14 @@ void traducir_codigo(const unordered_map<string, string>& diccionario) {
 
     cout << "\nCodigo traducido:\n" << endl;
 
-    bool es_funcion = false; // Bandera para identificar si estamos dentro de una función
+    bool es_funcion = false; // Bandera para identificar si estamos dentro de una funciÃ³n
 
     for (const auto& linea : codigo_original) {
         stringstream ss(linea);
         string palabra;
 
         while (ss >> palabra) {
-            // Detectar funciones (si hay paréntesis al final)
+            // Detectar funciones (si hay parÃ©ntesis al final)
             if (palabra.find("()") != string::npos) {
                 es_funcion = true;
             }
@@ -98,7 +98,7 @@ void traducir_codigo(const unordered_map<string, string>& diccionario) {
             } else if (palabra == "}") {
                 if (es_funcion) {
                     cout << "} ";
-                    es_funcion = false; // Salimos de la función
+                    es_funcion = false; // Salimos de la funciÃ³n
                 } else {
                     cout << "fin ";
                 }
@@ -110,7 +110,7 @@ void traducir_codigo(const unordered_map<string, string>& diccionario) {
     }
 }
 
-// Función principal
+// FunciÃ³n principal
 void traductor() {
     system("color fd"); // Cambiar el color de la consola a verde
     system("cls"); // Limpiar la consola al iniciar
@@ -132,17 +132,15 @@ void traductor() {
 
     char opcion;
     do {
-        // Traducir el código ingresado por el usuario
+        // Traducir el cÃ³digo ingresado por el usuario
         traducir_codigo(diccionario);
 
-        cout << "\n¿Desea traducir otro codigo? (s/n): ";
+        cout << "\nÂ¿Desea traducir otro codigo? (s/n): ";
         cin >> opcion;
-        opcion = tolower(opcion); // Convertir a minúscula para evitar problemas con mayúsculas
-        cin.ignore(); // Ignorar el salto de línea después de la entrada
+        opcion = tolower(opcion); // Convertir a minÃºscula para evitar problemas con mayÃºsculas
+        cin.ignore(); // Ignorar el salto de lÃ­nea despuÃ©s de la entrada
     } while (opcion == 's');
 
     cout << "Saliendo del traductor...\n";
     system("color 0A"); // Cambiar el color de la consola a verde
 }
-
->>>>>>> 7c566a32a12edc81d7b6b37b712d898d6a1dc891
