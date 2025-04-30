@@ -9,8 +9,7 @@
 *	José David Mazariegos Ortega
 *	Mynor Alexander Gómez Pedro
 *	Erick Manuel Fuentes Miranda
-<<<<<<< HEAD
-*	Francisco Antonio De LeÃ³n Natareno
+*	Francisco Antonio De León Natareno
 */
 
 #include <iostream>
@@ -58,59 +57,10 @@ unordered_map<string, string> cargar_diccionario(const string& archivo_nombre) {
     archivo.close();
     return diccionario;
 }
-=======
-*	Francisco Antonio De León Natareno
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Función para traducir el texto multilínea
 void traducir_codigo(const unordered_map<string, string>& diccionario) {
-    cout << "Ingrese el código C++ a traducir (finalice con una línea vacía):" << endl;
+    cout << "Ingrese el codigo C++ a traducir (finalice con una línea vacía):" << endl;
 
     string linea;
     vector<string> codigo_original;
@@ -122,7 +72,7 @@ void traducir_codigo(const unordered_map<string, string>& diccionario) {
         codigo_original.push_back(linea);
     }
 
-    cout << "\nCódigo traducido:\n" << endl;
+    cout << "\nCodigo traducido:\n" << endl;
 
     bool es_funcion = false; // Bandera para identificar si estamos dentro de una función
 
@@ -176,7 +126,7 @@ void traductor() {
     unordered_map<string, string> diccionario = cargar_diccionario(archivo_nombre);
 
     if (diccionario.empty()) {
-        cerr << "El diccionario está vacío. Verifique el archivo." << endl;
+        cerr << "El diccionario esta vacio. Verifique el archivo." << endl;
         return;
     }
 
@@ -185,7 +135,7 @@ void traductor() {
         // Traducir el código ingresado por el usuario
         traducir_codigo(diccionario);
 
-        cout << "\n¿Desea traducir otro código? (s/n): ";
+        cout << "\n¿Desea traducir otro codigo? (s/n): ";
         cin >> opcion;
         opcion = tolower(opcion); // Convertir a minúscula para evitar problemas con mayúsculas
         cin.ignore(); // Ignorar el salto de línea después de la entrada
